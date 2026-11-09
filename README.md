@@ -34,3 +34,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## AI features
+
+Set `ANTHROPIC_API_KEY` in `.env.local` (copy `.env.local.example`). Without it, every AI feature (chat widget, class search, auto-tagging, feedback summaries, moderation, content drafts) uses a deterministic fallback and still works for the demo. Routes live in `src/app/api/ai/*`; the key stays on the server. Check the fallbacks with `npx tsx src/lib/ai-fallback.check.ts`.
